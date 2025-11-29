@@ -23,6 +23,11 @@ A web-based calculator application with a premium **Glassmorphism** design aesth
     - Hover effects on buttons.
     - Active states for key presses.
     - Smooth transitions.
+- **Responsiveness**:
+    - **Desktop**: Centered layout with ample whitespace/background visibility.
+    - **Tablet**: Scaled-up interface for touch targets.
+    - **Mobile**: Full-width or highly optimized layout for one-handed use; ensure buttons are easily tappable (min 44px).
+    - **Breakpoints**: Use media queries to adjust font sizes, padding, and button dimensions dynamically.
 
 ## 3. Tech Stack
 - **HTML5**: Semantic structure.
