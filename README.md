@@ -1,6 +1,6 @@
-# Glassmorphism Calculator
+# Calculator App
 
-A simple, beautiful web-based calculator with a premium glassmorphism design.
+A simple, beautiful web-based calculator with a premium glassmorphism design. Vibe coded in Google Antigravity with Gemini 3.
 
 ## Features
 
