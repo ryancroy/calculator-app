@@ -67,10 +67,10 @@ class Calculator {
 
     getDisplayNumber(number) {
         const stringNumber = number.toString();
-        
+
         // Handle scientific notation for large numbers
         if (stringNumber.length > 9 || Math.abs(number) >= 1e9) {
-             return Number(number).toExponential(4);
+            return Number(number).toExponential(4);
         }
 
         const integerDigits = parseFloat(stringNumber.split('.')[0]);
@@ -127,6 +127,14 @@ operationButtons.forEach(button => {
 equalsButton.addEventListener('click', button => {
     calculator.compute();
     calculator.updateDisplay();
+});
+
+equalsButton.addEventListener('mousemove', (e) => {
+    const rect = equalsButton.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    equalsButton.style.setProperty('--x', `${x}px`);
+    equalsButton.style.setProperty('--y', `${y}px`);
 });
 
 allClearButton.addEventListener('click', button => {
