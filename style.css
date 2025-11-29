@@ -139,36 +139,46 @@ button {
     cursor: pointer;
     font-size: 1.5rem;
     border: 1px solid var(--glass-border);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    /* Subtle 3D edge */
     outline: none;
     background: rgba(255, 255, 255, 0.05);
     color: var(--text-color);
     border-radius: 15px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 button:hover {
     background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.05));
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 button:active {
     background: var(--btn-active);
-    transform: translateY(0);
+    transform: translateY(2px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
-button[data-equals] {
+button[data-equals],
+button[data-all-clear] {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.4);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
     font-weight: 600;
     position: relative;
     overflow: hidden;
 }
 
-button[data-equals]:hover {
+button[data-equals]:hover,
+button[data-all-clear]:hover {
     background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(0, 212, 255, 0.6), rgba(122, 0, 255, 0.6));
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .span-two {
