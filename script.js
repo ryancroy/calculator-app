@@ -129,12 +129,16 @@ equalsButton.addEventListener('click', button => {
     calculator.updateDisplay();
 });
 
-equalsButton.addEventListener('mousemove', (e) => {
-    const rect = equalsButton.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    equalsButton.style.setProperty('--x', `${x}px`);
-    equalsButton.style.setProperty('--y', `${y}px`);
+const allButtons = document.querySelectorAll('button');
+
+allButtons.forEach(button => {
+    button.addEventListener('mousemove', (e) => {
+        const rect = button.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        button.style.setProperty('--x', `${x}px`);
+        button.style.setProperty('--y', `${y}px`);
+    });
 });
 
 allClearButton.addEventListener('click', button => {

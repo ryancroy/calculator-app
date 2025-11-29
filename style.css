@@ -135,13 +135,15 @@ button {
     background: rgba(255, 255, 255, 0.05);
     color: var(--text-color);
     border-radius: 15px;
-    transition: all 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Removed background transition for instant gradient update */
+    position: relative;
+    overflow: hidden;
 }
 
 button:hover {
-    background: var(--btn-hover);
+    background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.05));
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 button:active {
