@@ -15,7 +15,7 @@
 
 body {
     margin: 0;
-    padding: 0;
+    padding: 2rem;
     background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
     min-height: 100vh;
     display: flex;
@@ -86,7 +86,6 @@ body {
     display: grid;
     justify-content: center;
     align-content: center;
-    min-height: 100vh;
     grid-template-columns: repeat(4, 80px);
     grid-template-rows: minmax(120px, auto) repeat(5, 80px);
     gap: 15px;
@@ -135,7 +134,7 @@ button {
     background: rgba(255, 255, 255, 0.05);
     color: var(--text-color);
     border-radius: 15px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Removed background transition for instant gradient update */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     position: relative;
     overflow: hidden;
 }
@@ -143,7 +142,7 @@ button {
 button:hover {
     background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.05));
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 button:active {
@@ -171,8 +170,7 @@ button[data-equals]:hover {
 @media (max-width: 600px) {
     .calculator-grid {
         width: 100%;
-        height: 100vh;
-        border-radius: 0;
+        border-radius: 20px;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: minmax(100px, auto) repeat(5, 1fr);
         gap: 10px;
