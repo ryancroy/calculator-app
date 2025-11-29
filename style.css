@@ -16,7 +16,7 @@
 body {
     margin: 0;
     padding: 2rem;
-    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+    background: #1e1e1e;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -26,6 +26,7 @@ body {
 
 /* Background Shapes for Depth */
 .background-shapes {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
