@@ -112,9 +112,9 @@ const outputContainer = document.querySelector('.output');
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement);
 
 function triggerFlash() {
-    outputContainer.classList.remove('flash');
-    void outputContainer.offsetWidth; // Trigger reflow to restart animation
-    outputContainer.classList.add('flash');
+    currentOperandTextElement.classList.remove('flash');
+    void currentOperandTextElement.offsetWidth; // Trigger reflow to restart animation
+    currentOperandTextElement.classList.add('flash');
 }
 
 numberButtons.forEach(button => {
