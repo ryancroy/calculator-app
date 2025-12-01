@@ -107,15 +107,8 @@ const deleteButton = document.querySelector('[data-delete]');
 const allClearButton = document.querySelector('[data-all-clear]');
 const previousOperandTextElement = document.querySelector('[data-previous-operand]');
 const currentOperandTextElement = document.querySelector('[data-current-operand]');
-const outputContainer = document.querySelector('.output');
 
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement);
-
-function triggerFlash() {
-    currentOperandTextElement.classList.remove('flash');
-    void currentOperandTextElement.offsetWidth; // Trigger reflow to restart animation
-    currentOperandTextElement.classList.add('flash');
-}
 
 numberButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -134,7 +127,6 @@ operationButtons.forEach(button => {
 equalsButton.addEventListener('click', button => {
     calculator.compute();
     calculator.updateDisplay();
-    triggerFlash();
 });
 
 const allButtons = document.querySelectorAll('button');
@@ -152,7 +144,6 @@ allButtons.forEach(button => {
 allClearButton.addEventListener('click', button => {
     calculator.clear();
     calculator.updateDisplay();
-    triggerFlash();
 });
 
 deleteButton.addEventListener('click', button => {
